@@ -28,8 +28,9 @@
 <meta property="og:description" content="Processor fundamentals revision notes">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://eellisk.github.io/images/von_model.png">
+<meta property="og:image" content="https://eellisk.github.io/images/stroed_program.png">
 <meta property="article:published_time" content="2020-11-11T12:49:27.927Z">
-<meta property="article:modified_time" content="2020-11-11T13:31:52.545Z">
+<meta property="article:modified_time" content="2020-11-11T23:59:14.135Z">
 <meta property="article:author" content="eellisk">
 <meta property="article:tag" content="AS_CS">
 <meta name="twitter:card" content="summary">
@@ -180,10 +181,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-11-11 20:49:27 / Modified: 21:31:52" itemprop="dateCreated datePublished" datetime="2020-11-11T20:49:27+08:00">2020-11-11</time>
+              <time title="Created: 2020-11-11 20:49:27" itemprop="dateCreated datePublished" datetime="2020-11-11T20:49:27+08:00">2020-11-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-11-12 07:59:14" itemprop="dateModified" datetime="2020-11-12T07:59:14+08:00">2020-11-12</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -200,14 +207,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>1.1k</span>
+              <span>2.5k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
 
         </div>
@@ -228,6 +235,11 @@
 <ul>
 <li>computer architecture which introduced the <mark>concept of the stored program</mark> in the 1940s</li>
 </ul></li>
+<li><font face="Bookman Old Style">Fetch-execute cycle</font>
+<ul>
+<li>a cycle in which instructions and data are <b>fetched</b> from memory and then <b>decoded</b> and finally <b>executed</b></li>
+</ul></li>
+<li><font face="Bookman Old Style"></font></li>
 <li><font face="Bookman Old Style">Arithmetic logic unit</font> | ALU
 <ul>
 <li><b>component</b> in the processor which carries out all <em>arithmetic</em> and <em>logical</em> operations</li>
@@ -244,13 +256,21 @@
 <ul>
 <li>holds <u>all data and programs</u> needed to be accessed by the control unit</li>
 </ul></li>
-<li><font face="Bookman Old Style">Accumulator</font>
-<ul>
-<li><b>temporary</b> <u>general purpose</u> register which stores numerical values at any part of a given operation</li>
-</ul></li>
 <li><font face="Bookman Old Style">Register</font>
 <ul>
 <li><b>temporary</b> component in the processor which can be general or specific in its use that holds data or instructions as part of the <mark>fetch-execute cycle</mark></li>
+</ul></li>
+<li><font face="Bookman Old Style">Program counter</font> | PC
+<ul>
+<li>a register used in a computer to store the <b>address</b> of the instruction which is <u>currently being executed</u></li>
+</ul></li>
+<li><font face="Bookman Old Style">Current instruction register</font> | CIR
+<ul>
+<li>a register used to contain the <b>instruction</b> which is currently being executed or decoded</li>
+</ul></li>
+<li><font face="Bookman Old Style">Accumulator</font>
+<ul>
+<li><b>temporary</b> <u>general purpose</u> register which stores numerical values at any part of a given operation</li>
 </ul></li>
 <li><font face="Bookman Old Style">Status register</font>
 <ul>
@@ -265,10 +285,56 @@
 <li>clock speeds are measured in terms of GHz; this is the vibrational frequency of the clock which sends out pulses along the control bus</li>
 <li>a <span class="math inline">\(3.5 GHz\)</span> clock cycle means <span class="math inline">\(3.5\)</span> billion clock cyles a second</li>
 </ul></li>
+<li><font face="Bookman Old Style">Interrupt</font>
+<ul>
+<li><b>signal</b> sent from a device or software to a processor requesting is attention</li>
+<li>the processor suspends all operations <em>until</em> the interrupt has ben serviced ## Central processing unit (CPU) architecture ### Von Neumann model</li>
+</ul></li>
 </ul>
-<h2 id="central-processing-unit-cpu-architecture">Central processing unit (CPU) architecture</h2>
-<h3 id="von-neumann-model">Von Neumann model</h3>
 <p><img src="/images/von_model.png" /></p>
+<ul>
+<li>Main features
+<ul>
+<li><b>a</b> central processing unit</li>
+<li>a processor able to access the memory directly</li>
+<li><mark>stored program concept</mark> <img src="/images/stroed_program.png" />
+<ul>
+<li>stored programs made up of instructions that could be executed in <b>sequential order</b></li>
+</ul></li>
+</ul></li>
+</ul>
+<h4 id="components-of-the-processor">Components of the processor</h4>
+<ul>
+<li><p>main components of the processor are the <font color=2cacda>ALU</font>, <font color=2cacda>CU</font>, <font color=2cacda>syste clock</font> and <font color=2cacda>IAS</font></p></li>
+<li><p><font face ="Agency FB" font size="5px">Arithmetic logic unit</font></p>
+<ul>
+<li>The ALU allows the required <em>arithmetic</em> or <em>logic</em> operations to be carried out while a program is being run</li>
+<li>The <font color=2cacda>accumulator</font> is a <b>temporary</b> register used when carrying out ALU calculations</li>
+</ul></li>
+<li><p><font face ="Agency FB" font size="5px">Control unit</font></p>
+<ul>
+<li>The CU <em>reads an instruction</em> from <b>memory</b> (the address of the location where the instruction can be found is stored in the <u>program counter</u>)
+<ul>
+<li>signals are generated along the <u>control bus</u> to tell the other components in the computer what to do</li>
+</ul></li>
+<li>The CU ensures <mark>synchronisation of data flow and program instructions</mark></li>
+</ul></li>
+<li><p><font face ="Agency FB" font size="5px">System clock</font></p>
+<ul>
+<li>to produce <b>timing signals</b> on the <u>control bus</u> to ensure this vital <b>synchronisation</b> takes place
+<ul>
+<li><em>without</em> the cloc the computer would simply <b>crash</b></li>
+<li><a href="#system_bus">see here</a></li>
+</ul></li>
+</ul></li>
+<li><p><font face ="Agency FB" font size="5px">Immediate access store</font> | RAM</p>
+<ul>
+<li>THe IAS holds all the data and programs that the processor needs to access
+<ul>
+<li>CPU takes data and programs held in backing store and puts them into the IAS <b>temorarily</b></li>
+</ul></li>
+</ul></li>
+</ul>
 
     </div>
 
@@ -366,7 +432,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#processor-fundamentals"><span class="nav-number">1.</span> <span class="nav-text">Processor fundamentals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#key-terms"><span class="nav-number">1.1.</span> <span class="nav-text">Key terms</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#central-processing-unit-cpu-architecture"><span class="nav-number">1.2.</span> <span class="nav-text">Central processing unit (CPU) architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#von-neumann-model"><span class="nav-number">1.2.1.</span> <span class="nav-text">Von Neumann model</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#processor-fundamentals"><span class="nav-number">1.</span> <span class="nav-text">Processor fundamentals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#key-terms"><span class="nav-number">1.1.</span> <span class="nav-text">Key terms</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-of-the-processor"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Components of the processor</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -427,13 +493,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">20k</span>
+    <span title="Symbols count total">22k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">19 mins.</span>
+    <span title="Reading time total">20 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
