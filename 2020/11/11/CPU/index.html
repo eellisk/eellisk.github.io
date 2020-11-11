@@ -20,20 +20,22 @@
     var CONFIG = {"hostname":"eellisk.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Demand &amp; Supply revision notes">
+  <meta name="description" content="Processor fundamentals revision notes">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Demand | Supply">
-<meta property="og:url" content="https://eellisk.github.io/2020/10/15/Demand&Supply/index.html">
+<meta property="og:title" content="Processor fundamentals">
+<meta property="og:url" content="https://eellisk.github.io/2020/11/11/CPU/index.html">
 <meta property="og:site_name" content="eellisks blog">
-<meta property="og:description" content="Demand &amp; Supply revision notes">
+<meta property="og:description" content="Processor fundamentals revision notes">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-10-15T10:45:32.107Z">
-<meta property="article:modified_time" content="2020-10-19T08:55:45.540Z">
+<meta property="og:image" content="https://eellisk.github.io/images/von_model.png">
+<meta property="article:published_time" content="2020-11-11T12:49:27.927Z">
+<meta property="article:modified_time" content="2020-11-11T13:31:52.545Z">
 <meta property="article:author" content="eellisk">
-<meta property="article:tag" content="AS_Econ">
+<meta property="article:tag" content="AS_CS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://eellisk.github.io/images/von_model.png">
 
-<link rel="canonical" href="https://eellisk.github.io/2020/10/15/Demand&Supply/">
+<link rel="canonical" href="https://eellisk.github.io/2020/11/11/CPU/">
 
 
 <script id="page-configurations">
@@ -46,7 +48,7 @@
   };
 </script>
 
-  <title>Demand | Supply | eellisks blog</title>
+  <title>Processor fundamentals | eellisks blog</title>
   
 
 
@@ -156,7 +158,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://eellisk.github.io/2020/10/15/Demand&Supply/">
+    <link itemprop="mainEntityOfPage" href="https://eellisk.github.io/2020/11/11/CPU/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -169,7 +171,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Demand | Supply
+          Processor fundamentals
         </h1>
 
         <div class="post-meta">
@@ -178,23 +180,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-10-15 18:45:32" itemprop="dateCreated datePublished" datetime="2020-10-15T18:45:32+08:00">2020-10-15</time>
+              <time title="Created: 2020-11-11 20:49:27 / Modified: 21:31:52" itemprop="dateCreated datePublished" datetime="2020-11-11T20:49:27+08:00">2020-11-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-19 16:55:45" itemprop="dateModified" datetime="2020-10-19T16:55:45+08:00">2020-10-19</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/AS-Econ/" itemprop="url" rel="index"><span itemprop="name">AS_Econ</span></a>
+                  <a href="/categories/AS-CS/" itemprop="url" rel="index"><span itemprop="name">AS_CS</span></a>
                 </span>
             </span>
 
@@ -204,7 +200,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>205</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -223,21 +219,56 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="demand-supply">Demand &amp; Supply</h1>
+        <h1 id="processor-fundamentals">Processor fundamentals</h1>
 <p>revision notes</p>
 <a id="more"></a>
-<h2 id="the-demand-side-of-the-market">The Demand Side of the Market</h2>
-<h3 id="definition">Definition</h3>
+<h2 id="key-terms">Key terms</h2>
 <ul>
-<li><font face ="Agency FB" font size="4px">Quantity demanded</font>
+<li><font face="Bookman Old Style">Von Neumann architecture</font>
 <ul>
-<li>the amount of a good that buyers are both <b>willing</b> and <b>able</b> to purchase</li>
+<li>computer architecture which introduced the <mark>concept of the stored program</mark> in the 1940s</li>
 </ul></li>
-<li><font face ="Agency FB" font size="4px">law of demand</font>
+<li><font face="Bookman Old Style">Arithmetic logic unit</font> | ALU
 <ul>
-<li>the <u>quantity demanded</u> of a good <b>falls</b> when the <u>price</u> of the good <b>rises</b></li>
+<li><b>component</b> in the processor which carries out all <em>arithmetic</em> and <em>logical</em> operations</li>
+</ul></li>
+<li><font face="Bookman Old Style">Control unit</font> | CU
+<ul>
+<li>ensures <b>synchronisation</b> of <em>data flow</em> and <em>programs</em> throught the computer by sending out <mark>control signals</mark> along the <mark>control bus</mark></li>
+</ul></li>
+<li><font face="Bookman Old Style">System clock</font>
+<ul>
+<li>produces <b>timing signals</b> on the control bus to ensure <mark>synchronisation</mark> takes place</li>
+</ul></li>
+<li><font face="Bookman Old Style">Immediate access store</font> | IAS
+<ul>
+<li>holds <u>all data and programs</u> needed to be accessed by the control unit</li>
+</ul></li>
+<li><font face="Bookman Old Style">Accumulator</font>
+<ul>
+<li><b>temporary</b> <u>general purpose</u> register which stores numerical values at any part of a given operation</li>
+</ul></li>
+<li><font face="Bookman Old Style">Register</font>
+<ul>
+<li><b>temporary</b> component in the processor which can be general or specific in its use that holds data or instructions as part of the <mark>fetch-execute cycle</mark></li>
+</ul></li>
+<li><font face="Bookman Old Style">Status register</font>
+<ul>
+<li>used when an instruction requires some form of arithmetic or logical processing</li>
+</ul></li>
+<li><font face="Bookman Old Style">Flag</font>
+<ul>
+<li>indicates the status of a bit in the status register</li>
+</ul></li>
+<li><font face="Bookman Old Style"> Clock cycle</font>
+<ul>
+<li>clock speeds are measured in terms of GHz; this is the vibrational frequency of the clock which sends out pulses along the control bus</li>
+<li>a <span class="math inline">\(3.5 GHz\)</span> clock cycle means <span class="math inline">\(3.5\)</span> billion clock cyles a second</li>
 </ul></li>
 </ul>
+<h2 id="central-processing-unit-cpu-architecture">Central processing unit (CPU) architecture</h2>
+<h3 id="von-neumann-model">Von Neumann model</h3>
+<p><img src="/images/von_model.png" /></p>
 
     </div>
 
@@ -253,7 +284,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="https://eellisk.github.io/2020/10/15/Demand&Supply/" title="Demand | Supply">https://eellisk.github.io/2020/10/15/Demand&Supply/</a>
+    <a href="https://eellisk.github.io/2020/11/11/CPU/" title="Processor fundamentals">https://eellisk.github.io/2020/11/11/CPU/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> unless stating additionally.
@@ -264,7 +295,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/AS-Econ/" rel="tag"># AS_Econ</a>
+              <a href="/tags/AS-CS/" rel="tag"># AS_CS</a>
           </div>
 
         
@@ -273,13 +304,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/10/14/PED_XED_YED/" rel="prev" title="Types of Elasticity of Demand">
-      <i class="fa fa-chevron-left"></i> Types of Elasticity of Demand
+    <a href="/2020/10/19/Data%20Representation/" rel="prev" title="Information representation and multimedia">
+      <i class="fa fa-chevron-left"></i> Information representation and multimedia
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/10/19/Data%20Representation/" rel="next" title="Information representation and multimedia">
-      Information representation and multimedia <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -338,7 +366,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#demand-supply"><span class="nav-number">1.</span> <span class="nav-text">Demand &amp; Supply</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#the-demand-side-of-the-market"><span class="nav-number">1.1.</span> <span class="nav-text">The Demand Side of the Market</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#definition"><span class="nav-number">1.1.1.</span> <span class="nav-text">Definition</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#processor-fundamentals"><span class="nav-number">1.</span> <span class="nav-text">Processor fundamentals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#key-terms"><span class="nav-number">1.1.</span> <span class="nav-text">Key terms</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#central-processing-unit-cpu-architecture"><span class="nav-number">1.2.</span> <span class="nav-text">Central processing unit (CPU) architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#von-neumann-model"><span class="nav-number">1.2.1.</span> <span class="nav-text">Von Neumann model</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
