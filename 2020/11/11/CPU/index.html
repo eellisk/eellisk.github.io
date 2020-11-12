@@ -32,8 +32,9 @@
 <meta property="og:image" content="https://eellisk.github.io/images/spe_registers.png">
 <meta property="og:image" content="https://eellisk.github.io/images/status_register.png">
 <meta property="og:image" content="https://eellisk.github.io/images/flags.png">
+<meta property="og:image" content="https://eellisk.github.io/images/CPU/buses.png">
 <meta property="article:published_time" content="2020-11-11T12:49:27.927Z">
-<meta property="article:modified_time" content="2020-11-12T00:13:16.149Z">
+<meta property="article:modified_time" content="2020-11-12T00:23:53.403Z">
 <meta property="article:author" content="eellisk">
 <meta property="article:tag" content="AS_CS">
 <meta name="twitter:card" content="summary">
@@ -192,7 +193,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-12 08:13:16" itemprop="dateModified" datetime="2020-11-12T08:13:16+08:00">2020-11-12</time>
+                <time title="Modified: 2020-11-12 08:23:53" itemprop="dateModified" datetime="2020-11-12T08:23:53+08:00">2020-11-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -210,7 +211,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2.9k</span>
+              <span>3.4k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -360,6 +361,8 @@
 </ul></li>
 </ul></li>
 </ul>
+<h4 id="system-buses">System buses</h4>
+<p><img src="/images/CPU/buses.png" /> - <font face ="Agency FB" font size="5px">Address bus</font> - <mark>unidirectional</mark> - this <em>prevents</em> addresses <u>being carried back to the CPU</u>, which would be undesirable - the <b>width</b> of a bus is important - ex. a bus of width <span class="math inline">\(n\)</span> bits can address <span class="math inline">\(2^{n}\)</span> memory locations - <font face ="Agency FB" font size="5px">Data bus</font> - <mark>bidirectional</mark> - this means data can be <u>carried from <b>CPU</b> to <b>memory</b></u> (and vice versa) - Data can be an <font color=1557bb>address</font>, <font color=1557bb>instruction</font> or a <font color=1557bb>numerical value</font> - <b>wider</b> the bus, the <b>larger</b> the word length that can be transproted - <font face ="Agency FB" font size="5px">Control bus</font> - <mark>bidirectional</mark> - carries <u>signals from <b>CPU</b> to all other computer components</u> - usually <font color=1557bb>8-bits</font> wide since it only carries <b>control signals</b></p>
 
     </div>
 
@@ -457,7 +460,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#processor-fundamentals"><span class="nav-number">1.</span> <span class="nav-text">Processor fundamentals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#key-terms"><span class="nav-number">1.1.</span> <span class="nav-text">Key terms</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-of-the-processor"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Components of the processor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#registers"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Registers</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#processor-fundamentals"><span class="nav-number">1.</span> <span class="nav-text">Processor fundamentals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#key-terms"><span class="nav-number">1.1.</span> <span class="nav-text">Key terms</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-of-the-processor"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Components of the processor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#registers"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Registers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#system-buses"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">System buses</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -518,13 +521,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">22k</span>
+    <span title="Symbols count total">23k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">20 mins.</span>
+    <span title="Reading time total">21 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
