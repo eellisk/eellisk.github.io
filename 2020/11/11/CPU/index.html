@@ -33,8 +33,9 @@
 <meta property="og:image" content="https://eellisk.github.io/images/status_register.png">
 <meta property="og:image" content="https://eellisk.github.io/images/flags.png">
 <meta property="og:image" content="https://eellisk.github.io/images/CPU/buses.png">
+<meta property="og:image" content="https://eellisk.github.io/images/CPU/process.png">
 <meta property="article:published_time" content="2020-11-11T12:49:27.927Z">
-<meta property="article:modified_time" content="2020-11-12T00:26:20.924Z">
+<meta property="article:modified_time" content="2020-11-12T00:29:15.184Z">
 <meta property="article:author" content="eellisk">
 <meta property="article:tag" content="AS_CS">
 <meta name="twitter:card" content="summary">
@@ -193,7 +194,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-12 08:26:20" itemprop="dateModified" datetime="2020-11-12T08:26:20+08:00">2020-11-12</time>
+                <time title="Modified: 2020-11-12 08:29:15" itemprop="dateModified" datetime="2020-11-12T08:29:15+08:00">2020-11-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -292,9 +293,11 @@
 <li><font face="Bookman Old Style">Interrupt</font>
 <ul>
 <li><b>signal</b> sent from a device or software to a processor requesting is attention</li>
-<li>the processor suspends all operations <em>until</em> the interrupt has ben serviced ## Central processing unit (CPU) architecture ### Von Neumann model</li>
+<li>the processor suspends all operations <em>until</em> the interrupt has ben serviced</li>
 </ul></li>
 </ul>
+<h2 id="central-processing-unit-cpu-architecture">Central processing unit (CPU) architecture</h2>
+<h3 id="von-neumann-model">Von Neumann model</h3>
 <p><img src="/images/von_model.png" /></p>
 <ul>
 <li>Main features
@@ -362,7 +365,41 @@
 </ul></li>
 </ul>
 <h4 id="system-buses">System buses</h4>
-<p><img src="/images/CPU/buses.png" /> - <font face ="Agency FB" font size="5px">Address bus</font> - <mark>unidirectional</mark> - this <em>prevents</em> addresses <u>being carried back to the CPU</u>, which would be undesirable - the <b>width</b> of a bus is important - ex. a bus of width <span class="math inline">\(n\)</span> bits can address <span class="math inline">\(2^{n}\)</span> memory locations - <font face ="Agency FB" font size="5px">Data bus</font> - <mark>bidirectional</mark> - this means data can be <u>carried from <b>CPU</b> to <b>memory</b></u> (and vice versa) - Data can be an <font color=1557bb>address</font>, <font color=1557bb>instruction</font> or a <font color=1557bb>numerical value</font> - <b>wider</b> the bus, the <b>larger</b> the word length that can be transproted - <font face ="Agency FB" font size="5px">Control bus</font> - <mark>bidirectional</mark> - carries <u>signals from <b>CPU</b> to all other computer components</u> - usually <font color=1557bb>8-bits</font> wide since it only carries <b>control signals</b></p>
+<p><img src="/images/CPU/buses.png" /></p>
+<ul>
+<li><font face ="Agency FB" font size="5px">Address bus</font>
+<ul>
+<li><mark>unidirectional</mark>
+<ul>
+<li>this <em>prevents</em> addresses <u>being carried back to the CPU</u>, which would be undesirable</li>
+</ul></li>
+<li>the <b>width</b> of a bus is important
+<ul>
+<li>ex. a bus of width <span class="math inline">\(n\)</span> bits can address <span class="math inline">\(2^{n}\)</span> memory locations</li>
+</ul></li>
+</ul></li>
+<li><font face ="Agency FB" font size="5px">Data bus</font>
+<ul>
+<li><mark>bidirectional</mark>
+<ul>
+<li>this means data can be <u>carried from <b>CPU</b> to <b>memory</b></u> (and vice versa)</li>
+</ul></li>
+<li>Data can be an <font color=1557bb>address</font>, <font color=1557bb>instruction</font> or a <font color=1557bb>numerical value</font>
+<ul>
+<li><b>wider</b> the bus, the <b>larger</b> the word length that can be transproted</li>
+</ul></li>
+</ul></li>
+<li><font face ="Agency FB" font size="5px">Control bus</font>
+<ul>
+<li><mark>bidirectional</mark>
+<ul>
+<li>carries <u>signals from <b>CPU</b> to all other computer components</u></li>
+</ul></li>
+<li>usually <font color=1557bb>8-bits</font> wide since it only carries <b>control signals</b></li>
+</ul></li>
+</ul>
+<h4 id="process">Process</h4>
+<p><img src="/images/CPU/process.png" /></p>
 
     </div>
 
@@ -460,7 +497,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#processor-fundamentals"><span class="nav-number">1.</span> <span class="nav-text">Processor fundamentals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#key-terms"><span class="nav-number">1.1.</span> <span class="nav-text">Key terms</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-of-the-processor"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Components of the processor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#registers"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Registers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#system-buses"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">System buses</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#processor-fundamentals"><span class="nav-number">1.</span> <span class="nav-text">Processor fundamentals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#key-terms"><span class="nav-number">1.1.</span> <span class="nav-text">Key terms</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#central-processing-unit-cpu-architecture"><span class="nav-number">1.2.</span> <span class="nav-text">Central processing unit (CPU) architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#von-neumann-model"><span class="nav-number">1.2.1.</span> <span class="nav-text">Von Neumann model</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-of-the-processor"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">Components of the processor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#registers"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">Registers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#system-buses"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">System buses</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#process"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">Process</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
